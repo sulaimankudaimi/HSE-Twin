@@ -4,13 +4,18 @@ import requests
 import numpy as np
 import plotly.express as px
 
+# محاولة استيراد YOLO فقط (لأنها أخف من TensorFlow)
 try:
-    import tensorflow as tf
     from ultralytics import YOLO
-    import cv2
-    HAS_AI = True
+    HAS_YOLO = True
 except ImportError:
-    HAS_AI = False
+    HAS_YOLO = False
+
+# --- واجهة المستخدم ---
+st.set_page_config(page_title="SPC | HSE & Asset Integrity Twin", layout="wide")
+
+if not HAS_YOLO:
+    st.sidebar.warning("⚠️ AI Modules are loading in the background...")
 
 # --- 1. إعدادات الصفحة ---
 st.set_page_config(page_title="SPC | HSE & Asset Integrity Twin", layout="wide", page_icon="🛡️")
