@@ -1,0 +1,7 @@
+streamlit
+tensorflow
+ultralytics
+requests
+numpy
+plotly
+pandas
