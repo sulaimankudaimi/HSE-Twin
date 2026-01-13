@@ -1,6 +1,7 @@
 streamlit
 tensorflow
 ultralytics
+opencv-python-headless
 requests
 numpy
 plotly
