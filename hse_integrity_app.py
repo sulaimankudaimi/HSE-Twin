@@ -1,10 +1,16 @@
 import streamlit as st
 import os
 import requests
-import tensorflow as tf
-from ultralytics import YOLO
 import numpy as np
 import plotly.express as px
+
+try:
+    import tensorflow as tf
+    from ultralytics import YOLO
+    import cv2
+    HAS_AI = True
+except ImportError:
+    HAS_AI = False
 
 # --- 1. إعدادات الصفحة ---
 st.set_page_config(page_title="SPC | HSE & Asset Integrity Twin", layout="wide", page_icon="🛡️")
