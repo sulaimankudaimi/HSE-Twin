@@ -1,8 +1,8 @@
 streamlit
-tensorflow
+tensorflow-cpu
 ultralytics
-opencv-python-headless
+opencv-python-headless==4.8.0.74
 requests
-numpy
+numpy<2.0.0
 plotly
 pandas
